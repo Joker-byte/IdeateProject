@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC33F2DE240FF22300B912B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2DD240FF22300B912B1 /* AppDelegate.swift */; };
+		FC33F2E0240FF22300B912B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */; };
+		FC33F2E2240FF22300B912B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2E1240FF22300B912B1 /* ViewController.swift */; };
+		FC33F2E5240FF22300B912B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2E3240FF22300B912B1 /* Main.storyboard */; };
+		FC33F2E8240FF22300B912B1 /* IdeateProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2E6240FF22300B912B1 /* IdeateProject.xcdatamodeld */; };
+		FC33F2EA240FF22400B912B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2E9240FF22400B912B1 /* Assets.xcassets */; };
+		FC33F2ED240FF22400B912B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */; };
+		FC33F2F8240FF22400B912B1 /* IdeateProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2F7240FF22400B912B1 /* IdeateProjectTests.swift */; };
+		FC33F303240FF22400B912B1 /* IdeateProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC33F2F4240FF22400B912B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC33F2D2240FF22300B912B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC33F2D9240FF22300B912B1;
+			remoteInfo = IdeateProject;
+		};
+		FC33F2FF240FF22400B912B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC33F2D2240FF22300B912B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC33F2D9240FF22300B912B1;
+			remoteInfo = IdeateProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC33F2DA240FF22300B912B1 /* IdeateProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeateProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC33F2DD240FF22300B912B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC33F2E1240FF22300B912B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC33F2E4240FF22300B912B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC33F2E7240FF22300B912B1 /* IdeateProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IdeateProject.xcdatamodel; sourceTree = "<group>"; };
+		FC33F2E9240FF22400B912B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC33F2EC240FF22400B912B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC33F2EE240FF22400B912B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC33F2F3240FF22400B912B1 /* IdeateProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeateProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC33F2F7240FF22400B912B1 /* IdeateProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeateProjectTests.swift; sourceTree = "<group>"; };
+		FC33F2F9240FF22400B912B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC33F2FE240FF22400B912B1 /* IdeateProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeateProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeateProjectUITests.swift; sourceTree = "<group>"; };
+		FC33F304240FF22400B912B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC33F2D7240FF22300B912B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC33F2F0240FF22400B912B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC33F2FB240FF22400B912B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC33F2D1240FF22300B912B1 = {
+			isa = PBXGroup;
+			children = (
+				FC33F2DC240FF22300B912B1 /* IdeateProject */,
+				FC33F2F6240FF22400B912B1 /* IdeateProjectTests */,
+				FC33F301240FF22400B912B1 /* IdeateProjectUITests */,
+				FC33F2DB240FF22300B912B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC33F2DB240FF22300B912B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC33F2DA240FF22300B912B1 /* IdeateProject.app */,
+				FC33F2F3240FF22400B912B1 /* IdeateProjectTests.xctest */,
+				FC33F2FE240FF22400B912B1 /* IdeateProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC33F2DC240FF22300B912B1 /* IdeateProject */ = {
+			isa = PBXGroup;
+			children = (
+				FC33F2DD240FF22300B912B1 /* AppDelegate.swift */,
+				FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */,
+				FC33F2E1240FF22300B912B1 /* ViewController.swift */,
+				FC33F2E3240FF22300B912B1 /* Main.storyboard */,
+				FC33F2E9240FF22400B912B1 /* Assets.xcassets */,
+				FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */,
+				FC33F2EE240FF22400B912B1 /* Info.plist */,
+				FC33F2E6240FF22300B912B1 /* IdeateProject.xcdatamodeld */,
+			);
+			path = IdeateProject;
+			sourceTree = "<group>";
+		};
+		FC33F2F6240FF22400B912B1 /* IdeateProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC33F2F7240FF22400B912B1 /* IdeateProjectTests.swift */,
+				FC33F2F9240FF22400B912B1 /* Info.plist */,
+			);
+			path = IdeateProjectTests;
+			sourceTree = "<group>";
+		};
+		FC33F301240FF22400B912B1 /* IdeateProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */,
+				FC33F304240FF22400B912B1 /* Info.plist */,
+			);
+			path = IdeateProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC33F2D9240FF22300B912B1 /* IdeateProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC33F307240FF22400B912B1 /* Build configuration list for PBXNativeTarget "IdeateProject" */;
+			buildPhases = (
+				FC33F2D6240FF22300B912B1 /* Sources */,
+				FC33F2D7240FF22300B912B1 /* Frameworks */,
+				FC33F2D8240FF22300B912B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IdeateProject;
+			productName = IdeateProject;
+			productReference = FC33F2DA240FF22300B912B1 /* IdeateProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC33F2F2240FF22400B912B1 /* IdeateProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC33F30A240FF22400B912B1 /* Build configuration list for PBXNativeTarget "IdeateProjectTests" */;
+			buildPhases = (
+				FC33F2EF240FF22400B912B1 /* Sources */,
+				FC33F2F0240FF22400B912B1 /* Frameworks */,
+				FC33F2F1240FF22400B912B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC33F2F5240FF22400B912B1 /* PBXTargetDependency */,
+			);
+			name = IdeateProjectTests;
+			productName = IdeateProjectTests;
+			productReference = FC33F2F3240FF22400B912B1 /* IdeateProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC33F2FD240FF22400B912B1 /* IdeateProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC33F30D240FF22400B912B1 /* Build configuration list for PBXNativeTarget "IdeateProjectUITests" */;
+			buildPhases = (
+				FC33F2FA240FF22400B912B1 /* Sources */,
+				FC33F2FB240FF22400B912B1 /* Frameworks */,
+				FC33F2FC240FF22400B912B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC33F300240FF22400B912B1 /* PBXTargetDependency */,
+			);
+			name = IdeateProjectUITests;
+			productName = IdeateProjectUITests;
+			productReference = FC33F2FE240FF22400B912B1 /* IdeateProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC33F2D2240FF22300B912B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Gianluca;
+				TargetAttributes = {
+					FC33F2D9240FF22300B912B1 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FC33F2F2240FF22400B912B1 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FC33F2D9240FF22300B912B1;
+					};
+					FC33F2FD240FF22400B912B1 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FC33F2D9240FF22300B912B1;
+					};
+				};
+			};
+			buildConfigurationList = FC33F2D5240FF22300B912B1 /* Build configuration list for PBXProject "IdeateProject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC33F2D1240FF22300B912B1;
+			productRefGroup = FC33F2DB240FF22300B912B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC33F2D9240FF22300B912B1 /* IdeateProject */,
+				FC33F2F2240FF22400B912B1 /* IdeateProjectTests */,
+				FC33F2FD240FF22400B912B1 /* IdeateProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC33F2D8240FF22300B912B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC33F2ED240FF22400B912B1 /* LaunchScreen.storyboard in Resources */,
+				FC33F2EA240FF22400B912B1 /* Assets.xcassets in Resources */,
+				FC33F2E5240FF22300B912B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC33F2F1240FF22400B912B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC33F2FC240FF22400B912B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC33F2D6240FF22300B912B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC33F2E2240FF22300B912B1 /* ViewController.swift in Sources */,
+				FC33F2E8240FF22300B912B1 /* IdeateProject.xcdatamodeld in Sources */,
+				FC33F2DE240FF22300B912B1 /* AppDelegate.swift in Sources */,
+				FC33F2E0240FF22300B912B1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC33F2EF240FF22400B912B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC33F2F8240FF22400B912B1 /* IdeateProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC33F2FA240FF22400B912B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC33F303240FF22400B912B1 /* IdeateProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC33F2F5240FF22400B912B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC33F2D9240FF22300B912B1 /* IdeateProject */;
+			targetProxy = FC33F2F4240FF22400B912B1 /* PBXContainerItemProxy */;
+		};
+		FC33F300240FF22400B912B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC33F2D9240FF22300B912B1 /* IdeateProject */;
+			targetProxy = FC33F2FF240FF22400B912B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC33F2E3240FF22300B912B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC33F2E4240FF22300B912B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC33F2EC240FF22400B912B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC33F305240FF22400B912B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC33F306240FF22400B912B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC33F308240FF22400B912B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZXU9362CX;
+				INFOPLIST_FILE = IdeateProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC33F309240FF22400B912B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZXU9362CX;
+				INFOPLIST_FILE = IdeateProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC33F30B240FF22400B912B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZXU9362CX;
+				INFOPLIST_FILE = IdeateProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeateProject.app/IdeateProject";
+			};
+			name = Debug;
+		};
+		FC33F30C240FF22400B912B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZXU9362CX;
+				INFOPLIST_FILE = IdeateProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeateProject.app/IdeateProject";
+			};
+			name = Release;
+		};
+		FC33F30E240FF22400B912B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZXU9362CX;
+				INFOPLIST_FILE = IdeateProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IdeateProject;
+			};
+			name = Debug;
+		};
+		FC33F30F240FF22400B912B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZXU9362CX;
+				INFOPLIST_FILE = IdeateProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IdeateProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC33F2D5240FF22300B912B1 /* Build configuration list for PBXProject "IdeateProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC33F305240FF22400B912B1 /* Debug */,
+				FC33F306240FF22400B912B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC33F307240FF22400B912B1 /* Build configuration list for PBXNativeTarget "IdeateProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC33F308240FF22400B912B1 /* Debug */,
+				FC33F309240FF22400B912B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC33F30A240FF22400B912B1 /* Build configuration list for PBXNativeTarget "IdeateProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC33F30B240FF22400B912B1 /* Debug */,
+				FC33F30C240FF22400B912B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC33F30D240FF22400B912B1 /* Build configuration list for PBXNativeTarget "IdeateProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC33F30E240FF22400B912B1 /* Debug */,
+				FC33F30F240FF22400B912B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC33F2E6240FF22300B912B1 /* IdeateProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC33F2E7240FF22300B912B1 /* IdeateProject.xcdatamodel */,
+			);
+			currentVersion = FC33F2E7240FF22300B912B1 /* IdeateProject.xcdatamodel */;
+			path = IdeateProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FC33F2D2240FF22300B912B1 /* Project object */;
+}
