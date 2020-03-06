@@ -3,22 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC33F2DE240FF22300B912B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2DD240FF22300B912B1 /* AppDelegate.swift */; };
-		FC33F2E0240FF22300B912B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */; };
-		FC33F2E2240FF22300B912B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2E1240FF22300B912B1 /* ViewController.swift */; };
-		FC33F2E8240FF22300B912B1 /* IdeateProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2E6240FF22300B912B1 /* IdeateProject.xcdatamodeld */; };
 		FC33F2EA240FF22400B912B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2E9240FF22400B912B1 /* Assets.xcassets */; };
 		FC33F2ED240FF22400B912B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */; };
 		FC33F2F8240FF22400B912B1 /* IdeateProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2F7240FF22400B912B1 /* IdeateProjectTests.swift */; };
 		FC33F303240FF22400B912B1 /* IdeateProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */; };
-		FC33F32324100A9600B912B1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F32224100A9600B912B1 /* TableViewCell.swift */; };
-		FC33F32524100A9B00B912B1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F32424100A9B00B912B1 /* Item.swift */; };
-		FC33F32724100AA400B912B1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F32624100AA400B912B1 /* DataManager.swift */; };
-		FC33F32924100B0000B912B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33F32824100B0000B912B1 /* Main.storyboard */; };
+		FCC16CA92412D26900927B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC16CA32412D26900927B3E /* Main.storyboard */; };
+		FCC16CAA2412D26900927B3E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA42412D26900927B3E /* DataManager.swift */; };
+		FCC16CAB2412D26A00927B3E /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA52412D26900927B3E /* TodoTableViewCell.swift */; };
+		FCC16CAC2412D26A00927B3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA62412D26900927B3E /* AppDelegate.swift */; };
+		FCC16CAD2412D26A00927B3E /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA72412D26900927B3E /* TodoItem.swift */; };
+		FCC16CAE2412D26A00927B3E /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA82412D26900927B3E /* TodoTableViewController.swift */; };
+		FCC16CB02412D2EE00927B3E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CAF2412D2EE00927B3E /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +39,6 @@
 
 /* Begin PBXFileReference section */
 		FC33F2DA240FF22300B912B1 /* IdeateProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeateProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC33F2DD240FF22300B912B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC33F2E1240FF22300B912B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC33F2E7240FF22300B912B1 /* IdeateProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IdeateProject.xcdatamodel; sourceTree = "<group>"; };
 		FC33F2E9240FF22400B912B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC33F2EC240FF22400B912B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC33F2EE240FF22400B912B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,10 +48,14 @@
 		FC33F2FE240FF22400B912B1 /* IdeateProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeateProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeateProjectUITests.swift; sourceTree = "<group>"; };
 		FC33F304240FF22400B912B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC33F32224100A9600B912B1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		FC33F32424100A9B00B912B1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		FC33F32624100AA400B912B1 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		FC33F32824100B0000B912B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FCC16CA22412D26900927B3E /* IdeateProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdeateProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		FCC16CA32412D26900927B3E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FCC16CA42412D26900927B3E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FCC16CA52412D26900927B3E /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		FCC16CA62412D26900927B3E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCC16CA72412D26900927B3E /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		FCC16CA82412D26900927B3E /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		FCC16CAF2412D2EE00927B3E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +106,17 @@
 		FC33F2DC240FF22300B912B1 /* IdeateProject */ = {
 			isa = PBXGroup;
 			children = (
-				FC33F2DD240FF22300B912B1 /* AppDelegate.swift */,
-				FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */,
-				FC33F2E1240FF22300B912B1 /* ViewController.swift */,
-				FC33F32224100A9600B912B1 /* TableViewCell.swift */,
-				FC33F32424100A9B00B912B1 /* Item.swift */,
-				FC33F32824100B0000B912B1 /* Main.storyboard */,
-				FC33F32624100AA400B912B1 /* DataManager.swift */,
+				FCC16CA62412D26900927B3E /* AppDelegate.swift */,
+				FCC16CA42412D26900927B3E /* DataManager.swift */,
+				FCC16CA32412D26900927B3E /* Main.storyboard */,
+				FCC16CA72412D26900927B3E /* TodoItem.swift */,
+				FCC16CA52412D26900927B3E /* TodoTableViewCell.swift */,
+				FCC16CA82412D26900927B3E /* TodoTableViewController.swift */,
 				FC33F2E9240FF22400B912B1 /* Assets.xcassets */,
 				FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */,
+				FCC16CAF2412D2EE00927B3E /* File.swift */,
 				FC33F2EE240FF22400B912B1 /* Info.plist */,
-				FC33F2E6240FF22300B912B1 /* IdeateProject.xcdatamodeld */,
+				FCC16CA22412D26900927B3E /* IdeateProject-Bridging-Header.h */,
 			);
 			path = IdeateProject;
 			sourceTree = "<group>";
@@ -204,10 +203,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = Gianluca;
+				ORGANIZATIONNAME = "Gianluca Dubioso";
 				TargetAttributes = {
 					FC33F2D9240FF22300B912B1 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					FC33F2F2240FF22400B912B1 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -220,7 +220,7 @@
 				};
 			};
 			buildConfigurationList = FC33F2D5240FF22300B912B1 /* Build configuration list for PBXProject "IdeateProject" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -244,7 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC33F32924100B0000B912B1 /* Main.storyboard in Resources */,
+				FCC16CA92412D26900927B3E /* Main.storyboard in Resources */,
 				FC33F2ED240FF22400B912B1 /* LaunchScreen.storyboard in Resources */,
 				FC33F2EA240FF22400B912B1 /* Assets.xcassets in Resources */,
 			);
@@ -271,13 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC33F2E2240FF22300B912B1 /* ViewController.swift in Sources */,
-				FC33F2E8240FF22300B912B1 /* IdeateProject.xcdatamodeld in Sources */,
-				FC33F2DE240FF22300B912B1 /* AppDelegate.swift in Sources */,
-				FC33F32724100AA400B912B1 /* DataManager.swift in Sources */,
-				FC33F32324100A9600B912B1 /* TableViewCell.swift in Sources */,
-				FC33F32524100A9B00B912B1 /* Item.swift in Sources */,
-				FC33F2E0240FF22300B912B1 /* SceneDelegate.swift in Sources */,
+				FCC16CAC2412D26A00927B3E /* AppDelegate.swift in Sources */,
+				FCC16CB02412D2EE00927B3E /* File.swift in Sources */,
+				FCC16CAE2412D26A00927B3E /* TodoTableViewController.swift in Sources */,
+				FCC16CAA2412D26900927B3E /* DataManager.swift in Sources */,
+				FCC16CAD2412D26A00927B3E /* TodoItem.swift in Sources */,
+				FCC16CAB2412D26A00927B3E /* TodoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZXU9362CX;
 				INFOPLIST_FILE = IdeateProject/Info.plist;
@@ -451,6 +451,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IdeateProject/IdeateProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZXU9362CX;
 				INFOPLIST_FILE = IdeateProject/Info.plist;
@@ -469,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ProjectideaTE01.IdeateProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IdeateProject/IdeateProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -598,19 +602,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FC33F2E6240FF22300B912B1 /* IdeateProject.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FC33F2E7240FF22300B912B1 /* IdeateProject.xcdatamodel */,
-			);
-			currentVersion = FC33F2E7240FF22300B912B1 /* IdeateProject.xcdatamodel */;
-			path = IdeateProject.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FC33F2D2240FF22300B912B1 /* Project object */;
 }

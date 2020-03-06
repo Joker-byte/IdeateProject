@@ -1,18 +1,18 @@
 //
-//  ViewController.swift
+//  TodoTableViewController.swift
 //  IdeateProject
 //
-//  Created by Gianluca Dubioso on 04/03/2020.
+//  Created by Gianluca Dubioso on 06/03/2020.
 //  Copyright © 2020 Gianluca. All rights reserved.
 //
 
 import UIKit
 import MultipeerConnectivity
 
-class ViewController: UITableViewController, CellDelegate, MCSessionDelegate, MCBrowserViewControllerDelegate {
+class TodoTableViewController: UITableViewController, TodoCellDelegate, MCSessionDelegate, MCBrowserViewControllerDelegate {
 
 
-    var items:[Item]!
+    var todoItems:[TodoItem]!
     
     
     var peerID:MCPeerID!
@@ -32,24 +32,24 @@ class ViewController: UITableViewController, CellDelegate, MCSessionDelegate, MC
     }
     
     func loadData(){
-        items = [Item]()
-        items = DataManager.loadAll(Item.self).sorted(by: {$0.createdAt < $1.createdAt})
+        todoItems = [TodoItem]()
+        todoItems = DataManager.loadAll(TodoItem.self).sorted(by: {$0.createdAt < $1.createdAt})
         self.tableView.reloadData()
     }
     
     
     
     @IBAction func addTodo(_ sender: Any) {
-        let addAlert = UIAlertController(title: "New", message: "Enter a title", preferredStyle: .alert)
+        let addAlert = UIAlertController(title: "New Todo", message: "Enter a title", preferredStyle: .alert)
         addAlert.addTextField { (textfield:UITextField) in
-            textfield.placeholder = "Item Title"
+            textfield.placeholder = "ToDo Item Title"
         }
         
         addAlert.addAction(UIAlertAction(title: "Create", style: .default, handler: { (action:UIAlertAction) in
             guard let title = addAlert.textFields?.first?.text else {return}
-            let newTodo = Item(title: title, completed: false, createdAt: Date(), itemIdentifier: UUID())
+            let newTodo = TodoItem(title: title, completed: false, createdAt: Date(), itemIdentifier: UUID())
             newTodo.saveItem()
-            self.items.append(newTodo)
+            self.todoItems.append(newTodo)
             
             let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0), section: 0)
             
@@ -72,51 +72,51 @@ class ViewController: UITableViewController, CellDelegate, MCSessionDelegate, MC
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return items.count
+        return todoItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TodoTableViewCell
 
-        let item = items[indexPath.row]
-        cell.todoLabel.text = item.title
+        let todoItem = todoItems[indexPath.row]
+        cell.todoLabel.text = todoItem.title
         cell.delegte = self
         
-        if item.completed {
-            cell.todoLabel.attributedText = strikeThroughText(item.title)
+        if todoItem.completed {
+            cell.todoLabel.attributedText = strikeThroughText(todoItem.title)
         }
 
         return cell
     }
     
-    func didRequestDelete(_ cell: TableViewCell) {
+    func didRequestDelete(_ cell: TodoTableViewCell) {
         
         if let indexPath = tableView.indexPath(for: cell) {
-            items[indexPath.row].deleteItem()
-            items.remove(at: indexPath.row)
+            todoItems[indexPath.row].deleteItem()
+            todoItems.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
         }
     }
     
-    func didRequestComplete(_ cell: TableViewCell) {
+    func didRequestComplete(_ cell: TodoTableViewCell) {
         
         if let indexPath = tableView.indexPath(for: cell) {
-            var todoItem = items[indexPath.row]
+            var todoItem = todoItems[indexPath.row]
             todoItem.markAsCompleted()
             cell.todoLabel.attributedText = strikeThroughText(todoItem.title)
         }
     }
     
-    func didRequestShare(_ cell: TableViewCell) {
+    func didRequestShare(_ cell: TodoTableViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
-            let todoItem = items[indexPath.row]
+            let todoItem = todoItems[indexPath.row]
             sendTodo(todoItem)
         }
     }
     
-    func sendTodo (_ todoItem:Item) {
+    func sendTodo (_ todoItem:TodoItem) {
         if mcSession.connectedPeers.count > 0 {
             if let todoData = DataManager.loadData(todoItem.itemIdentifier.uuidString) {
                 do {
@@ -143,7 +143,7 @@ class ViewController: UITableViewController, CellDelegate, MCSessionDelegate, MC
     
     
     @IBAction func showConnectivityActions(_ sender: Any) {
-        let actionSheet = UIAlertController(title: "ToDo Exchange", message: "Do you want to Host or Join a session?", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "ToDo Exchange", message: "Do you want to Host or Join a session?", preferredStyle: .alert)
         
         actionSheet.addAction(UIAlertAction(title: "Host Session", style: .default, handler: { (action:UIAlertAction) in
             
@@ -174,19 +174,20 @@ class ViewController: UITableViewController, CellDelegate, MCSessionDelegate, MC
             
         case MCSessionState.notConnected:
             print("Not Connected: \(peerID.displayName)")
-        @unknown default: break
+        @unknown default:
+            break
         }
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         
         do {
-            let item = try JSONDecoder().decode(Item.self, from: data)
+            let todoItem = try JSONDecoder().decode(TodoItem.self, from: data)
             
-            DataManager.save(item, with: item.itemIdentifier.uuidString)
+            DataManager.save(todoItem, with: todoItem.itemIdentifier.uuidString)
             
             DispatchQueue.main.async {
-                self.items.append(item)
+                self.todoItems.append(todoItem)
                 
                 let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0), section: 0)
                 
@@ -222,5 +223,3 @@ class ViewController: UITableViewController, CellDelegate, MCSessionDelegate, MC
     
    
 }
-
-

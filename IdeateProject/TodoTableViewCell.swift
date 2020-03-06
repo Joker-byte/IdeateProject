@@ -1,32 +1,24 @@
-
+// TableViewCell.swift
+//  IdeateProject
+//
+//  Created by Gianluca Dubioso on 06/03/2020.
+//  Copyright © 2020 Gianluca. All rights reserved.
+//
 import UIKit
 
-protocol CellDelegate {
-    func didRequestDelete(_ cell:TableViewCell)
-    func didRequestComplete(_ cell:TableViewCell)
-    func didRequestShare(_ cell:TableViewCell)
+protocol TodoCellDelegate {
+    func didRequestDelete(_ cell:TodoTableViewCell)
+    func didRequestComplete(_ cell:TodoTableViewCell)
+    func didRequestShare(_ cell:TodoTableViewCell)
 }
 
-class TableViewCell: UITableViewCell {
+class TodoTableViewCell: UITableViewCell {
 
-    var delegte: CellDelegate?
+    var delegte:TodoCellDelegate?
     
     @IBOutlet weak var todoLabel: UILabel!
     
-    @IBOutlet weak var delete: UIButton!
-    
-    @IBOutlet weak var Share: UIButton!
-    
-    @IBOutlet weak var Complete: UIButton!
-    
     override func awakeFromNib() {
-        todoLabel.layer.cornerRadius = 8.0
-        delete.layer.cornerRadius = 8.0
-        Share.layer.cornerRadius = 8.0
-        Complete.layer.cornerRadius = 8.0
-       
-        
-        
         super.awakeFromNib()
         // Initialization code
     }
@@ -38,7 +30,6 @@ class TableViewCell: UITableViewCell {
     }
     
     @IBAction func shareToDo(_ sender: Any) {
-       
         if let delegateObject = self.delegte {
             delegateObject.didRequestShare(self)
         }

@@ -1,9 +1,9 @@
 //
 //  DataManager.swift
-//  Todo
+//  IdeateProject
 //
-//  Created by Brian Advent on 08.12.17.
-//  Copyright © 2017 Brian Advent. All rights reserved.
+//  Created by Gianluca Dubioso on 06/03/2020.
+//  Copyright © 2020 Gianluca. All rights reserved.
 //
 
 import Foundation
