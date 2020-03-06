@@ -10,12 +10,15 @@
 		FC33F2DE240FF22300B912B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2DD240FF22300B912B1 /* AppDelegate.swift */; };
 		FC33F2E0240FF22300B912B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */; };
 		FC33F2E2240FF22300B912B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2E1240FF22300B912B1 /* ViewController.swift */; };
-		FC33F2E5240FF22300B912B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2E3240FF22300B912B1 /* Main.storyboard */; };
 		FC33F2E8240FF22300B912B1 /* IdeateProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2E6240FF22300B912B1 /* IdeateProject.xcdatamodeld */; };
 		FC33F2EA240FF22400B912B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2E9240FF22400B912B1 /* Assets.xcassets */; };
 		FC33F2ED240FF22400B912B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */; };
 		FC33F2F8240FF22400B912B1 /* IdeateProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F2F7240FF22400B912B1 /* IdeateProjectTests.swift */; };
 		FC33F303240FF22400B912B1 /* IdeateProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */; };
+		FC33F32324100A9600B912B1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F32224100A9600B912B1 /* TableViewCell.swift */; };
+		FC33F32524100A9B00B912B1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F32424100A9B00B912B1 /* Item.swift */; };
+		FC33F32724100AA400B912B1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F32624100AA400B912B1 /* DataManager.swift */; };
+		FC33F32924100B0000B912B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33F32824100B0000B912B1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 		FC33F2DD240FF22300B912B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FC33F2E1240FF22300B912B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC33F2E4240FF22300B912B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC33F2E7240FF22300B912B1 /* IdeateProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IdeateProject.xcdatamodel; sourceTree = "<group>"; };
 		FC33F2E9240FF22400B912B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC33F2EC240FF22400B912B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		FC33F2FE240FF22400B912B1 /* IdeateProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeateProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeateProjectUITests.swift; sourceTree = "<group>"; };
 		FC33F304240FF22400B912B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC33F32224100A9600B912B1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FC33F32424100A9B00B912B1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FC33F32624100AA400B912B1 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FC33F32824100B0000B912B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,10 @@
 				FC33F2DD240FF22300B912B1 /* AppDelegate.swift */,
 				FC33F2DF240FF22300B912B1 /* SceneDelegate.swift */,
 				FC33F2E1240FF22300B912B1 /* ViewController.swift */,
-				FC33F2E3240FF22300B912B1 /* Main.storyboard */,
+				FC33F32224100A9600B912B1 /* TableViewCell.swift */,
+				FC33F32424100A9B00B912B1 /* Item.swift */,
+				FC33F32824100B0000B912B1 /* Main.storyboard */,
+				FC33F32624100AA400B912B1 /* DataManager.swift */,
 				FC33F2E9240FF22400B912B1 /* Assets.xcassets */,
 				FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */,
 				FC33F2EE240FF22400B912B1 /* Info.plist */,
@@ -235,9 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC33F32924100B0000B912B1 /* Main.storyboard in Resources */,
 				FC33F2ED240FF22400B912B1 /* LaunchScreen.storyboard in Resources */,
 				FC33F2EA240FF22400B912B1 /* Assets.xcassets in Resources */,
-				FC33F2E5240FF22300B912B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,9 @@
 				FC33F2E2240FF22300B912B1 /* ViewController.swift in Sources */,
 				FC33F2E8240FF22300B912B1 /* IdeateProject.xcdatamodeld in Sources */,
 				FC33F2DE240FF22300B912B1 /* AppDelegate.swift in Sources */,
+				FC33F32724100AA400B912B1 /* DataManager.swift in Sources */,
+				FC33F32324100A9600B912B1 /* TableViewCell.swift in Sources */,
+				FC33F32524100A9B00B912B1 /* Item.swift in Sources */,
 				FC33F2E0240FF22300B912B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC33F2E3240FF22300B912B1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC33F2E4240FF22300B912B1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
