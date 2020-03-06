@@ -1,5 +1,5 @@
 //
-//  TodoTableViewController.swift
+//  IdeateTableViewController.swift
 //  IdeateProject
 //
 //  Created by Gianluca Dubioso on 06/03/2020.
@@ -9,10 +9,10 @@
 import UIKit
 import MultipeerConnectivity
 
-class TodoTableViewController: UITableViewController, TodoCellDelegate, MCSessionDelegate, MCBrowserViewControllerDelegate {
+class IdeateTableViewController: UITableViewController, IdeateCellDelegate, MCSessionDelegate, MCBrowserViewControllerDelegate {
 
 
-    var todoItems:[TodoItem]!
+    var ideateItems:[IdeateItem]!
     
     
     var peerID:MCPeerID!
@@ -32,24 +32,24 @@ class TodoTableViewController: UITableViewController, TodoCellDelegate, MCSessio
     }
     
     func loadData(){
-        todoItems = [TodoItem]()
-        todoItems = DataManager.loadAll(TodoItem.self).sorted(by: {$0.createdAt < $1.createdAt})
+        ideateItems = [IdeateItem]()
+        ideateItems = DataManager.loadAll(IdeateItem.self).sorted(by: {$0.createdAt < $1.createdAt})
         self.tableView.reloadData()
     }
     
     
     
-    @IBAction func addTodo(_ sender: Any) {
-        let addAlert = UIAlertController(title: "New Todo", message: "Enter a title", preferredStyle: .alert)
+    @IBAction func addItem(_ sender: Any) {
+        let addAlert = UIAlertController(title: "New ", message: "Enter a title", preferredStyle: .alert)
         addAlert.addTextField { (textfield:UITextField) in
-            textfield.placeholder = "ToDo Item Title"
+            textfield.placeholder = " Item Title"
         }
         
         addAlert.addAction(UIAlertAction(title: "Create", style: .default, handler: { (action:UIAlertAction) in
             guard let title = addAlert.textFields?.first?.text else {return}
-            let newTodo = TodoItem(title: title, completed: false, createdAt: Date(), itemIdentifier: UUID())
-            newTodo.saveItem()
-            self.todoItems.append(newTodo)
+            let newIdeate = IdeateItem(title: title, completed: false, createdAt: Date(), itemIdentifier: UUID())
+            newIdeate.saveItem()
+            self.ideateItems.append(newIdeate)
             
             let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0), section: 0)
             
@@ -72,57 +72,57 @@ class TodoTableViewController: UITableViewController, TodoCellDelegate, MCSessio
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return todoItems.count
+        return ideateItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TodoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! IdeateTableViewCell
 
-        let todoItem = todoItems[indexPath.row]
-        cell.todoLabel.text = todoItem.title
-        cell.delegte = self
+        let ideateItem = ideateItems[indexPath.row]
+        cell.IdeateLabel.text = ideateItem.title
+        cell.delegate = self
         
-        if todoItem.completed {
-            cell.todoLabel.attributedText = strikeThroughText(todoItem.title)
+        if ideateItem.completed {
+            cell.IdeateLabel.attributedText = strikeThroughText(ideateItem.title)
         }
 
         return cell
     }
     
-    func didRequestDelete(_ cell: TodoTableViewCell) {
+    func didRequestDelete(_ cell: IdeateTableViewCell) {
         
         if let indexPath = tableView.indexPath(for: cell) {
-            todoItems[indexPath.row].deleteItem()
-            todoItems.remove(at: indexPath.row)
+            ideateItems[indexPath.row].deleteItem()
+            ideateItems.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
         }
     }
     
-    func didRequestComplete(_ cell: TodoTableViewCell) {
+    func didRequestComplete(_ cell: IdeateTableViewCell) {
         
         if let indexPath = tableView.indexPath(for: cell) {
-            var todoItem = todoItems[indexPath.row]
-            todoItem.markAsCompleted()
-            cell.todoLabel.attributedText = strikeThroughText(todoItem.title)
+            var ideateItem = ideateItems[indexPath.row]
+            ideateItem.markAsCompleted()
+            cell.IdeateLabel.attributedText = strikeThroughText(ideateItem.title)
         }
     }
     
-    func didRequestShare(_ cell: TodoTableViewCell) {
+    func didRequestShare(_ cell: IdeateTableViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
-            let todoItem = todoItems[indexPath.row]
-            sendTodo(todoItem)
+            let ideateItem = ideateItems[indexPath.row]
+            sendIdeate(ideateItem)
         }
     }
     
-    func sendTodo (_ todoItem:TodoItem) {
+    func sendIdeate (_ ideateItem:IdeateItem) {
         if mcSession.connectedPeers.count > 0 {
-            if let todoData = DataManager.loadData(todoItem.itemIdentifier.uuidString) {
+            if let ideateData = DataManager.loadData(ideateItem.itemIdentifier.uuidString) {
                 do {
-                    try mcSession.send(todoData, toPeers: mcSession.connectedPeers, with: .reliable)
+                    try mcSession.send(ideateData, toPeers: mcSession.connectedPeers, with: .reliable)
                 }catch{
-                    fatalError("Could not send todo item")
+                    fatalError("Could not send item")
                 }
             }
         }else{
@@ -143,7 +143,7 @@ class TodoTableViewController: UITableViewController, TodoCellDelegate, MCSessio
     
     
     @IBAction func showConnectivityActions(_ sender: Any) {
-        let actionSheet = UIAlertController(title: "ToDo Exchange", message: "Do you want to Host or Join a session?", preferredStyle: .alert)
+        let actionSheet = UIAlertController(title: " Exchange", message: "Do you want to Host or Join a session?", preferredStyle: .alert)
         
         actionSheet.addAction(UIAlertAction(title: "Host Session", style: .default, handler: { (action:UIAlertAction) in
             
@@ -182,12 +182,12 @@ class TodoTableViewController: UITableViewController, TodoCellDelegate, MCSessio
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         
         do {
-            let todoItem = try JSONDecoder().decode(TodoItem.self, from: data)
+            let ideateItem = try JSONDecoder().decode(IdeateItem.self, from: data)
             
-            DataManager.save(todoItem, with: todoItem.itemIdentifier.uuidString)
+            DataManager.save(ideateItem, with: ideateItem.itemIdentifier.uuidString)
             
             DispatchQueue.main.async {
-                self.todoItems.append(todoItem)
+                self.ideateItems.append(ideateItem)
                 
                 let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0), section: 0)
                 

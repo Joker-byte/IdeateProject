@@ -1,5 +1,5 @@
 //
-//  TodoItem.swift
+//  IdeaTeItem.swift
 //  IdeateProject
 //
 //  Created by Gianluca Dubioso on 06/03/2020.
@@ -10,7 +10,7 @@ import CloudKit
 
 
 
-struct TodoItem : Codable {
+struct IdeateItem : Codable {
 
     var title:String
     var completed:Bool

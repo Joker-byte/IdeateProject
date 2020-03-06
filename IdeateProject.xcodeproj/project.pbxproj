@@ -13,11 +13,10 @@
 		FC33F303240FF22400B912B1 /* IdeateProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33F302240FF22400B912B1 /* IdeateProjectUITests.swift */; };
 		FCC16CA92412D26900927B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC16CA32412D26900927B3E /* Main.storyboard */; };
 		FCC16CAA2412D26900927B3E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA42412D26900927B3E /* DataManager.swift */; };
-		FCC16CAB2412D26A00927B3E /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA52412D26900927B3E /* TodoTableViewCell.swift */; };
+		FCC16CAB2412D26A00927B3E /* IdeateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA52412D26900927B3E /* IdeateTableViewCell.swift */; };
 		FCC16CAC2412D26A00927B3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA62412D26900927B3E /* AppDelegate.swift */; };
-		FCC16CAD2412D26A00927B3E /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA72412D26900927B3E /* TodoItem.swift */; };
-		FCC16CAE2412D26A00927B3E /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA82412D26900927B3E /* TodoTableViewController.swift */; };
-		FCC16CB02412D2EE00927B3E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CAF2412D2EE00927B3E /* File.swift */; };
+		FCC16CAD2412D26A00927B3E /* IdeaTeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA72412D26900927B3E /* IdeaTeItem.swift */; };
+		FCC16CAE2412D26A00927B3E /* IdeateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16CA82412D26900927B3E /* IdeateTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +50,10 @@
 		FCC16CA22412D26900927B3E /* IdeateProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdeateProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCC16CA32412D26900927B3E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FCC16CA42412D26900927B3E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		FCC16CA52412D26900927B3E /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		FCC16CA52412D26900927B3E /* IdeateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeateTableViewCell.swift; sourceTree = "<group>"; };
 		FCC16CA62412D26900927B3E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCC16CA72412D26900927B3E /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		FCC16CA82412D26900927B3E /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
-		FCC16CAF2412D2EE00927B3E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FCC16CA72412D26900927B3E /* IdeaTeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaTeItem.swift; sourceTree = "<group>"; };
+		FCC16CA82412D26900927B3E /* IdeateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeateTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +107,11 @@
 				FCC16CA62412D26900927B3E /* AppDelegate.swift */,
 				FCC16CA42412D26900927B3E /* DataManager.swift */,
 				FCC16CA32412D26900927B3E /* Main.storyboard */,
-				FCC16CA72412D26900927B3E /* TodoItem.swift */,
-				FCC16CA52412D26900927B3E /* TodoTableViewCell.swift */,
-				FCC16CA82412D26900927B3E /* TodoTableViewController.swift */,
+				FCC16CA72412D26900927B3E /* IdeaTeItem.swift */,
+				FCC16CA52412D26900927B3E /* IdeateTableViewCell.swift */,
+				FCC16CA82412D26900927B3E /* IdeateTableViewController.swift */,
 				FC33F2E9240FF22400B912B1 /* Assets.xcassets */,
 				FC33F2EB240FF22400B912B1 /* LaunchScreen.storyboard */,
-				FCC16CAF2412D2EE00927B3E /* File.swift */,
 				FC33F2EE240FF22400B912B1 /* Info.plist */,
 				FCC16CA22412D26900927B3E /* IdeateProject-Bridging-Header.h */,
 			);
@@ -272,11 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC16CAC2412D26A00927B3E /* AppDelegate.swift in Sources */,
-				FCC16CB02412D2EE00927B3E /* File.swift in Sources */,
-				FCC16CAE2412D26A00927B3E /* TodoTableViewController.swift in Sources */,
+				FCC16CAE2412D26A00927B3E /* IdeateTableViewController.swift in Sources */,
 				FCC16CAA2412D26900927B3E /* DataManager.swift in Sources */,
-				FCC16CAD2412D26A00927B3E /* TodoItem.swift in Sources */,
-				FCC16CAB2412D26A00927B3E /* TodoTableViewCell.swift in Sources */,
+				FCC16CAD2412D26A00927B3E /* IdeaTeItem.swift in Sources */,
+				FCC16CAB2412D26A00927B3E /* IdeateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

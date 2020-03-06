@@ -6,36 +6,36 @@
 //
 import UIKit
 
-protocol TodoCellDelegate {
-    func didRequestDelete(_ cell:TodoTableViewCell)
-    func didRequestComplete(_ cell:TodoTableViewCell)
-    func didRequestShare(_ cell:TodoTableViewCell)
+protocol IdeateCellDelegate {
+    func didRequestDelete(_ cell:IdeateTableViewCell)
+    func didRequestComplete(_ cell:IdeateTableViewCell)
+    func didRequestShare(_ cell:IdeateTableViewCell)
 }
 
-class TodoTableViewCell: UITableViewCell {
+class IdeateTableViewCell: UITableViewCell {
 
-    var delegte:TodoCellDelegate?
+    var delegate:IdeateCellDelegate?
     
-    @IBOutlet weak var todoLabel: UILabel!
+    @IBOutlet weak var IdeateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    @IBAction func deleteTodo(_ sender: Any) {
-        if let delegateObject = self.delegte {
+    @IBAction func deleteIdeate(_ sender: Any) {
+        if let delegateObject = self.delegate {
             delegateObject.didRequestDelete(self)
         }
     }
     
-    @IBAction func shareToDo(_ sender: Any) {
-        if let delegateObject = self.delegte {
+    @IBAction func shareIdeate(_ sender: Any) {
+        if let delegateObject = self.delegate {
             delegateObject.didRequestShare(self)
         }
     }
-    @IBAction func completeTodo(_ sender: Any) {
-        if let delegateObject = self.delegte {
+    @IBAction func completeIdeate(_ sender: Any) {
+        if let delegateObject = self.delegate {
             delegateObject.didRequestComplete(self)
         }
     }
